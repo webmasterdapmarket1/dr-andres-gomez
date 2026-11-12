@@ -1,0 +1,39 @@
+{
+  "name": "dr-andres-gomez",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/tier1_features.test.ts tests/tier2_boundaries.test.ts tests/tier3_combinations.test.ts tests/tier4_user_journeys.test.ts tests/infra/vercel_spa.test.ts tests/m3_procedures.test.ts",
+    "test:tier1": "node --test tests/tier1_features.test.ts",
+    "test:tier2": "node --test tests/tier2_boundaries.test.ts",
+    "test:tier3": "node --test tests/tier3_combinations.test.ts",
+    "test:tier4": "node --test tests/tier4_user_journeys.test.ts",
+    "test:infra": "node --test tests/infra/vercel_spa.test.ts",
+    "test:m3": "node --test tests/m3_procedures.test.ts",
+    "verify:procedures": "node scripts/verify_procedures.mjs",
+    "verify:procedures:self-test": "node scripts/verify_procedures.mjs --self-test",
+    "test:all": "node scripts/verify_procedures.mjs && npm test"
+  },
+  "dependencies": {
+    "@healthicons/react": "^2.0.0",
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.7",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

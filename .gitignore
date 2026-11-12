@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Teamwork internal state
+.agents/teamwork/
+TEST_INFRA.md
+TEST_READY.md
+
+# Editor & OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
