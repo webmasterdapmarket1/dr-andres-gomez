@@ -21,6 +21,7 @@ import TechnicalModuleCard from './TechnicalModuleCard';
 import ProcedureCard from './ProcedureCard';
 import IntimateNoticeCard from './IntimateNoticeCard';
 import { getProcedureBySlug, getRelatedProcedures } from '@/data/procedures';
+import { siteConfig } from '@/data/siteConfig';
 import type { Procedure, ProcedureCategory } from '@/types/procedure';
 
 export interface ProcedureDetailPageProps {
@@ -146,10 +147,16 @@ export const ProcedureDetailPage: React.FC<ProcedureDetailPageProps> = ({
                 </span>
               ) : null}
 
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-graphite-muted bg-white border border-cream-200">
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-graphite-muted hover:text-medical-primary bg-white border border-cream-200 transition-colors"
+                title="Ver dirección de la clínica en Google Maps"
+              >
                 <Building2 className="w-3.5 h-3.5 text-medical-primary" />
                 Torre Zentai, Consultorio 805
-              </span>
+              </a>
             </div>
 
             {/* Subtitle kicker */}
@@ -531,14 +538,26 @@ export const ProcedureDetailPage: React.FC<ProcedureDetailPageProps> = ({
             </p>
 
             <div className="flex flex-wrap items-center gap-2 text-xs text-cream-200/80 mb-8">
-              <span className="inline-flex items-center gap-1.5 bg-navy-800/80 px-3 py-1.5 rounded-lg border border-navy-700">
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-navy-800/80 hover:bg-navy-800 text-cream-100 hover:text-white px-3 py-1.5 rounded-lg border border-navy-700 transition-colors"
+                title="Ver ubicación de Torre Zentai en Google Maps"
+              >
                 <MapPin className="w-3.5 h-3.5 text-medical-soft" />
                 Edificio Torre Zentai, Carrera 23 # 124-87, Consultorio 805, Bogotá
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-navy-800/80 px-3 py-1.5 rounded-lg border border-navy-700">
+              </a>
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-navy-800/80 hover:bg-navy-800 text-cream-100 hover:text-white px-3 py-1.5 rounded-lg border border-navy-700 transition-colors"
+                title="Ver ubicación de la Clínica CCOM en Google Maps"
+              >
                 <Building2 className="w-3.5 h-3.5 text-medical-soft" />
                 Respaldo CCOM
-              </span>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-4">

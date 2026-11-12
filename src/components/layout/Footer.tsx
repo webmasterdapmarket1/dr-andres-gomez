@@ -104,7 +104,15 @@ export const Footer: React.FC = () => {
             <div className="flex items-start gap-2.5 text-graphite-muted">
               <MapPin className="w-4 h-4 text-medical-soft flex-shrink-0 mt-0.5" aria-hidden="true" />
               <address className="not-italic leading-relaxed">
-                {siteConfig.contact.address.full}
+                <a
+                  href={siteConfig.contact.address.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  title="Ver ubicación de la clínica en Google Maps"
+                >
+                  {siteConfig.contact.address.full}
+                </a>
               </address>
             </div>
 
@@ -147,7 +155,7 @@ export const Footer: React.FC = () => {
         {/* Section 5: Institutional Backing & Social Links Strip */}
         <div className="py-6 border-b border-navy-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           {/* Institutional Backing */}
-          <div className="flex items-center gap-3 text-graphite-muted">
+          <div className="flex flex-wrap items-center gap-3 text-graphite-muted">
             <span>Respaldo institucional:</span>
             <a
               href={siteConfig.institutional.clinicUrl}
@@ -158,6 +166,17 @@ export const Footer: React.FC = () => {
             >
               <span>{siteConfig.institutional.clinicName}</span>
               <ExternalLink className="w-3 h-3" aria-hidden="true" />
+            </a>
+            <span className="text-navy-700" aria-hidden="true">•</span>
+            <a
+              href={siteConfig.contact.address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-medical-soft hover:text-white font-medium inline-flex items-center gap-1 transition-colors"
+              title="Ver dirección de la clínica en Google Maps"
+            >
+              <MapPin className="w-3 h-3" aria-hidden="true" />
+              <span>Ubicación en Google Maps</span>
             </a>
           </div>
 

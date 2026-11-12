@@ -28,6 +28,7 @@ export interface SiteConfig {
       country: string;
       full: string;
       mapsUrl: string;
+      mapsEmbedUrl: string;
     };
     pbx: string[];
     whatsapp: {
@@ -48,6 +49,7 @@ export interface SiteConfig {
   institutional: {
     clinicName: string;
     clinicUrl: string;
+    clinicMapsUrl: string;
     badgeText: string;
     secretaryOfHealth: string;
   };
@@ -85,7 +87,9 @@ export const siteConfig: SiteConfig = {
       city: "Bogotá D.C.",
       country: "Colombia",
       full: "Cra. 23 No. 124 – 87, Torre 1, Consultorio 805, Bogotá D.C., Colombia",
-      mapsUrl: "https://maps.google.com/?q=Torre+Zentai+Cra.+23+124-87+Bogota",
+      mapsUrl: "https://maps.app.goo.gl/m88t5MnQyuwVAXJN9",
+      mapsEmbedUrl:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.2995!2d-74.055858!3d4.7049783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a93dbcda04b%3A0xa5e137e2e005b5da!2sCl%C3%ADnica%20Colombiana%20de%20Obesidad%20y%20Metabolismo!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco",
     },
     pbx: ["+57 315 873 9927", "+57 315 801 0982"],
     whatsapp: {
@@ -111,6 +115,7 @@ export const siteConfig: SiteConfig = {
   institutional: {
     clinicName: "Clínica Colombiana de Obesidad y Metabolismo (CCOM)",
     clinicUrl: "https://clinicacolombianaobesidad.com",
+    clinicMapsUrl: "https://maps.app.goo.gl/m88t5MnQyuwVAXJN9",
     badgeText: "Respaldo e Infraestructura Quirúrgica Acreditada",
     secretaryOfHealth: "Habilitación Seccional de Salud de Bogotá",
   },

@@ -272,19 +272,39 @@ export const AboutDoctorPage: React.FC = () => {
 
             <div className="space-y-3 text-xs text-graphite-body leading-relaxed">
               <p>
-                Como Director Científico de Cirugía Plástica en la <strong>Clínica Colombiana de Obesidad y Metabolismo (CCOM)</strong>, el Dr. Andrés Gómez garantiza a cada paciente una infraestructura de salud de nivel hospitalario, evitando cualquier procedimiento en consultorios no autorizados.
+                Como Director Científico de Cirugía Plástica en la{' '}
+                <a
+                  href={siteConfig.contact.address.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-medical-primary hover:underline"
+                  title="Ver ubicación de la Clínica Colombiana de Obesidad y Metabolismo en Google Maps"
+                >
+                  Clínica Colombiana de Obesidad y Metabolismo (CCOM)
+                </a>
+                , el Dr. Andrés Gómez garantiza a cada paciente una infraestructura de salud de nivel hospitalario, evitando cualquier procedimiento en consultorios no autorizados.
               </p>
               <p>
                 Cada cirugía cuenta con la presencia permanente de un médico especialista en Anestesiología y Reanimación, sala de recuperación monitorizada y tecnología médica de marcas líderes mundiales.
               </p>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-4">
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-bold text-medical-primary hover:text-medical-hover"
+              >
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Ver ubicación de la Clínica CCOM en Google Maps</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
               <a
                 href={siteConfig.institutional.clinicUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold text-medical-primary hover:text-medical-hover"
+                className="inline-flex items-center gap-2 text-xs font-bold text-navy-800 hover:text-medical-primary"
               >
                 <span>Conocer más sobre el respaldo institucional de la Clínica CCOM</span>
                 <ExternalLink className="w-3.5 h-3.5" />

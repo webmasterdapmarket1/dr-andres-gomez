@@ -39,7 +39,16 @@ export const PrivacyPolicyPage: React.FC = () => {
               1. Identificación del Responsable del Tratamiento
             </h2>
             <p>
-              El responsable del tratamiento de los datos personales recopilados a través de este sitio web es el <strong>Dr. Andrés Gómez</strong>, médico especialista en Cirugía Plástica, Estética y Reconstructiva, con consultorio principal ubicado en el Edificio Torre Zentai, Carrera 23 No. 124 – 87, Torre 1, Consultorio 805, Bogotá D.C., Colombia.
+              El responsable del tratamiento de los datos personales recopilados a través de este sitio web es el <strong>Dr. Andrés Gómez</strong>, médico especialista en Cirugía Plástica, Estética y Reconstructiva, con consultorio principal ubicado en el{' '}
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-medical-primary hover:underline"
+              >
+                Edificio Torre Zentai, Carrera 23 No. 124 – 87, Torre 1, Consultorio 805, Bogotá D.C., Colombia
+              </a>
+              .
             </p>
             <div className="p-3.5 rounded-xl bg-cream-50 border border-cream-200 text-xs space-y-1">
               <p>• <strong>Correo de Privacidad:</strong> privacidad@drandresgomez.com / contacto@drandresgomez.com</p>

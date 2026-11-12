@@ -15,6 +15,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import ProcedureCard from './ProcedureCard';
 import IntimateNoticeCard from './IntimateNoticeCard';
 import { getAllProcedures } from '@/data/procedures';
+import { siteConfig } from '@/data/siteConfig';
 import type { ProcedureCategory } from '@/types/procedure';
 
 export const ProceduresIndexPage: React.FC = () => {
@@ -97,10 +98,16 @@ export const ProceduresIndexPage: React.FC = () => {
             <ShieldCheck className="w-4 h-4 text-medical-primary" />
             6 Cirugía Íntima
           </span>
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-cream-300 shadow-sm">
+          <a
+            href={siteConfig.contact.address.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-cream-300 shadow-sm hover:border-medical-primary hover:text-medical-primary transition-colors"
+            title="Ver ubicación de la clínica en Google Maps"
+          >
             <MapPin className="w-3.5 h-3.5 text-medical-primary" />
             Torre Zentai, Bogotá
-          </span>
+          </a>
         </div>
 
         {/* 3 Featured Category Jump Cards */}

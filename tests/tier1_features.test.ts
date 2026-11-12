@@ -41,7 +41,7 @@ describe('Tier 1: Feature Coverage (60 Test Cases)', () => {
       expect(torreZentai.edificio).toContain('Torre Zentai');
       expect(torreZentai.address).toContain('Carrera 23 No. 124');
       expect(torreZentai.city).toBe('Bogotá D.C., Colombia');
-      expect(torreZentai.mapsUrl).toContain('https://maps.google.com');
+      expect(torreZentai.mapsUrl).toBe('https://maps.app.goo.gl/m88t5MnQyuwVAXJN9');
     });
 
     it('TC-T1-TOPBAR-02: Presencia y formato de teléfonos PBX con enlace tel:', () => {
@@ -623,8 +623,8 @@ describe('Tier 1: Feature Coverage (60 Test Cases)', () => {
 
     it('TC-T1-CONTACT-03: Integración de mapa interactivo de Google Maps', () => {
       const mapLink = CANONICAL_SITE_CONFIG.torreZentai.mapsUrl;
-      expect(mapLink).toContain('https://maps.google.com');
-      expect(mapLink).toContain('Torre+Zentai');
+      expect(mapLink).toBe('https://maps.app.goo.gl/m88t5MnQyuwVAXJN9');
+      expect(CANONICAL_SITE_CONFIG.torreZentai.mapsEmbedUrl).toContain('https://www.google.com/maps/embed');
     });
 
     it('TC-T1-CONTACT-04: Canales telefónicos directos y WhatsApp alterno', () => {

@@ -315,7 +315,17 @@ export const HomePage: React.FC = () => {
                   Graduado de la Escuela de Medicina Juan N. Corpas y con formación especializada en Cirugía Plástica, Estética y Reconstructiva en SACPER (Buenos Aires, Argentina), lidera el equipo quirúrgico con protocolos vanguardistas de retracción de piel con láser y ultrasonido.
                 </p>
                 <p>
-                  Como Director de Cirugía Plástica en la Clínica Colombiana de Obesidad y Metabolismo (CCOM), supervisa cada caso con un equipo multidisciplinario que incluye enfermería especializada 1 a 1 encabezada por la Jefa Dora Calderón Vega.
+                  Como Director de Cirugía Plástica en la{' '}
+                  <a
+                    href={siteConfig.contact.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-medical-primary hover:underline"
+                    title="Ver ubicación de la Clínica Colombiana de Obesidad y Metabolismo en Google Maps"
+                  >
+                    Clínica Colombiana de Obesidad y Metabolismo (CCOM)
+                  </a>
+                  , supervisa cada caso con un equipo multidisciplinario que incluye enfermería especializada 1 a 1 encabezada por la Jefa Dora Calderón Vega.
                 </p>
               </div>
 
@@ -705,7 +715,14 @@ export const HomePage: React.FC = () => {
                   <MapPin className="w-5 h-5 text-medical-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
                     <span className="font-bold text-navy-800 block text-sm">Dirección Oficial</span>
-                    <p className="mt-0.5">{siteConfig.contact.address.full}</p>
+                    <a
+                      href={siteConfig.contact.address.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-0.5 block hover:text-medical-primary transition-colors"
+                    >
+                      {siteConfig.contact.address.full}
+                    </a>
                     <span className="text-graphite-muted text-[11px]">Zona Santa Bárbara / Usaquén • Parqueadero de visitantes disponible</span>
                   </div>
                 </div>
@@ -768,27 +785,39 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Column: Map Preview Graphic */}
+            {/* Right Column: Interactive Google Maps Iframe */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl overflow-hidden border border-cream-300 shadow-elevated relative group">
-                <img
-                  src="/images/map-torre-zentai.png"
-                  alt="Mapa de ubicación Edificio Torre Zentai en Bogotá"
-                  className="w-full h-auto object-cover max-h-[420px]"
-                  loading="lazy"
-                />
-                <a
-                  href={siteConfig.contact.address.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 bg-navy-950/20 group-hover:bg-navy-950/40 transition-colors flex items-center justify-center"
-                  aria-label="Abrir mapa interactivo de Torre Zentai en Google Maps"
-                >
-                  <span className="btn-primary text-xs py-2.5 px-5 shadow-floating inline-flex items-center gap-2">
+              <div className="rounded-3xl overflow-hidden border border-cream-300 shadow-elevated bg-white">
+                <div className="relative w-full h-[380px] sm:h-[420px]">
+                  <iframe
+                    src={siteConfig.contact.address.mapsEmbedUrl}
+                    title="Ubicación Clínica Colombiana de Obesidad y Metabolismo - Edificio Torre Zentai en Google Maps"
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div className="p-4 bg-white border-t border-cream-300 flex items-center justify-between gap-4">
+                  <div>
+                    <span className="font-serif text-sm sm:text-base font-bold text-navy-800 block">
+                      {siteConfig.institutional.clinicName}
+                    </span>
+                    <span className="text-xs text-graphite-muted">
+                      {siteConfig.contact.address.building} • {siteConfig.contact.address.street}, {siteConfig.contact.address.office}
+                    </span>
+                  </div>
+                  <a
+                    href={siteConfig.contact.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-xs py-2.5 px-5 shadow-sm inline-flex items-center gap-2 flex-shrink-0"
+                    aria-label="Abrir mapa interactivo de Torre Zentai en Google Maps"
+                  >
                     <MapPin className="w-4 h-4" />
                     <span>Abrir en Google Maps</span>
-                  </span>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

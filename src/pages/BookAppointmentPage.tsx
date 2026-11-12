@@ -341,11 +341,30 @@ export const BookAppointmentPage: React.FC = () => {
             <div className="bg-cream-50 rounded-3xl p-6 border border-cream-300 space-y-4">
               <h4 className="font-serif text-lg font-bold text-navy-800 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-medical-primary" />
-                <span>Sede Torre Zentai</span>
+                <span>Sede Torre Zentai — Clínica CCOM</span>
               </h4>
               <p className="text-xs text-graphite-body leading-relaxed">
                 {siteConfig.contact.address.full}
               </p>
+              <div className="rounded-2xl overflow-hidden border border-cream-300 h-44 bg-white">
+                <iframe
+                  src={siteConfig.contact.address.mapsEmbedUrl}
+                  title="Ubicación Clínica Colombiana de Obesidad y Metabolismo en Torre Zentai"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <a
+                href={siteConfig.contact.address.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-medical-primary hover:text-medical-hover"
+              >
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Abrir ubicación de la clínica en Google Maps</span>
+              </a>
               <div className="space-y-1.5 text-xs text-graphite-muted pt-2 border-t border-cream-300/60">
                 <p><strong>PBX:</strong> {siteConfig.contact.pbx.join(' • ')}</p>
                 <p><strong>Horarios:</strong> {siteConfig.contact.hours.summary}</p>

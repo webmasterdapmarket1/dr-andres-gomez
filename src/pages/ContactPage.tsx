@@ -142,28 +142,33 @@ export const ContactPage: React.FC = () => {
 
         {/* Location & Map Interactive Container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-4">
-          {/* Map Image & Directions */}
+          {/* Map Iframe & Directions */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="rounded-3xl overflow-hidden border border-cream-300 shadow-elevated relative group">
-              <img
-                src="/images/map-torre-zentai.png"
-                alt="Mapa de localización Torre Zentai en Usaquén Bogotá"
-                className="w-full h-auto object-cover max-h-[460px]"
-              />
-              <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-cream-300 flex items-center justify-between">
+            <div className="rounded-3xl overflow-hidden border border-cream-300 shadow-elevated bg-white">
+              <div className="relative w-full h-[380px] sm:h-[420px]">
+                <iframe
+                  src={siteConfig.contact.address.mapsEmbedUrl}
+                  title="Mapa de localización Clínica Colombiana de Obesidad y Metabolismo - Torre Zentai en Usaquén Bogotá"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-cream-300 flex items-center justify-between gap-4">
                 <div>
                   <span className="font-serif text-base font-bold text-navy-800 block">
-                    Edificio Torre Zentai • Consultorio 805
+                    {siteConfig.institutional.clinicName} • Edificio Torre Zentai
                   </span>
                   <span className="text-xs text-graphite-muted">
-                    {siteConfig.contact.address.street}, Torre 1, Bogotá D.C.
+                    {siteConfig.contact.address.street}, {siteConfig.contact.address.tower}, {siteConfig.contact.address.office}, Bogotá D.C.
                   </span>
                 </div>
                 <a
                   href={siteConfig.contact.address.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5"
+                  className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5 flex-shrink-0"
                 >
                   <MapPin className="w-3.5 h-3.5" />
                   <span>Cómo llegar</span>
