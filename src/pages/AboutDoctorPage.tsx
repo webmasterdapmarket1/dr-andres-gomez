@@ -78,9 +78,9 @@ export const AboutDoctorPage: React.FC = () => {
             <div className="relative w-full max-w-md">
               <div className="rounded-3xl overflow-hidden shadow-elevated border border-cream-300 bg-white">
                 <img
-                  src="/images/dr-gomez-hero-card.png"
+                  src="/images/dr-andres-gomez-ccoym-1024x682.webp"
                   alt="Dr. Andrés Gómez, Cirujano Plástico Corpas y SACPER"
-                  className="w-full h-auto object-cover"
+                  className="w-full aspect-[4/3.6] object-cover object-[45%_top]"
                 />
               </div>
 
@@ -166,23 +166,36 @@ export const AboutDoctorPage: React.FC = () => {
           subtitle="La cirugía estética de excelencia no busca imponer formas artificiales, sino realzar la anatomía individual con el menor estrés tisular posible."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {doctorProfile.philosophy.pillars.map((pillar, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-white border border-cream-300 shadow-sm hover:shadow-elevated transition-all space-y-3"
-            >
-              <div className="w-10 h-10 rounded-full bg-medical-soft text-medical-primary flex items-center justify-center font-bold text-sm">
-                0{idx + 1}
-              </div>
-              <h3 className="font-serif text-lg font-bold text-navy-800">
-                {pillar.title}
-              </h3>
-              <p className="text-xs text-graphite-body leading-relaxed">
-                {pillar.description}
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-12">
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="w-full max-w-sm rounded-3xl overflow-hidden border border-cream-300 shadow-elevated bg-gradient-to-b from-cream-100 via-cream-50 to-white pt-6 px-6 flex flex-col items-center">
+              <img
+                src="/images/dr-adndres-gomez-cirujano-plastico-ccoym-2017-min.webp"
+                alt="Dr. Andrés Gómez en indumentaria quirúrgica CCOM"
+                className="w-full max-w-[260px] h-auto object-contain object-bottom"
+                loading="lazy"
+              />
             </div>
-          ))}
+          </div>
+
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {doctorProfile.philosophy.pillars.map((pillar, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white border border-cream-300 shadow-sm hover:shadow-elevated transition-all space-y-3"
+              >
+                <div className="w-10 h-10 rounded-full bg-medical-soft text-medical-primary flex items-center justify-center font-bold text-sm">
+                  0{idx + 1}
+                </div>
+                <h3 className="font-serif text-lg font-bold text-navy-800">
+                  {pillar.title}
+                </h3>
+                <p className="text-xs text-graphite-body leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

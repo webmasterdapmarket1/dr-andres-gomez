@@ -27,6 +27,8 @@ export interface TeamMember {
 export interface DoctorProfile {
   fullName: string;
   title: string;
+  portraitImage: string;
+  scrubsImage: string;
   shortBio: string;
   fullBio: string[];
   education: EducationItem[];
@@ -42,6 +44,8 @@ export interface DoctorProfile {
 export const doctorProfile: DoctorProfile = {
   fullName: "Dr. Andrés Gómez",
   title: "Cirujano Plástico, Estético y Reconstructivo",
+  portraitImage: "/images/dr-andres-gomez-ccoym-1024x682.webp",
+  scrubsImage: "/images/dr-adndres-gomez-cirujano-plastico-ccoym-2017-min.webp",
   shortBio:
     "Más de 29 años de trayectoria quirúrgica dedicados a la excelencia, la naturalidad y la seguridad del paciente. Especialista graduado en la Escuela de Medicina Juan N. Corpas y la Universidad SACPER en Buenos Aires, Argentina.",
   fullBio: [

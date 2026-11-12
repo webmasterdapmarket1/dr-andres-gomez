@@ -185,9 +185,9 @@ export const HomePage: React.FC = () => {
                   }`}
                 >
                   <img
-                    src="/images/dr-gomez-hero.png"
+                    src="/images/dr-andres-gomez-ccoym-1024x682.webp"
                     alt="Dr. Andrés Gómez, Cirujano Plástico y Reconstructivo en Bogotá"
-                    className="w-full h-auto object-cover object-top max-h-[520px]"
+                    className="w-full aspect-[4/4.3] object-cover object-[45%_top]"
                     loading="eager"
                   />
                 </div>
@@ -286,11 +286,11 @@ export const HomePage: React.FC = () => {
             {/* Doctor in Scrubs Image */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-full max-w-md">
-                <div className="rounded-3xl overflow-hidden shadow-elevated border border-cream-300 bg-white">
+                <div className="rounded-3xl overflow-hidden shadow-elevated border border-cream-300 bg-gradient-to-b from-cream-100 via-cream-50 to-white pt-6 px-6 flex justify-center">
                   <img
-                    src="/images/dr-gomez-scrubs.png"
+                    src="/images/dr-adndres-gomez-cirujano-plastico-ccoym-2017-min.webp"
                     alt="Dr. Andrés Gómez en quirófano de alta tecnología"
-                    className="w-full h-auto object-cover"
+                    className="w-full max-w-[320px] h-auto object-contain object-bottom"
                     loading="lazy"
                   />
                 </div>

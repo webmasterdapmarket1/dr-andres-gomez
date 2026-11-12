@@ -115,9 +115,9 @@ export const BlogPostPage: React.FC = () => {
         {/* Author Card */}
         <div className="p-6 rounded-2xl bg-cream-50 border border-cream-300 flex flex-col sm:flex-row items-center gap-6">
           <img
-            src="/images/dr-gomez-hero-card.png"
+            src="/images/dr-andres-gomez-ccoym-1024x682.webp"
             alt="Dr. Andrés Gómez MD"
-            className="w-20 h-20 rounded-full object-cover border-2 border-medical-primary shadow-sm flex-shrink-0"
+            className="w-20 h-20 rounded-full object-cover object-[45%_18%] border-2 border-medical-primary shadow-sm flex-shrink-0"
           />
           <div className="space-y-1 text-center sm:text-left">
             <span className="text-xs font-bold text-medical-primary uppercase tracking-wider block">

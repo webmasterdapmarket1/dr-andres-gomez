@@ -143,9 +143,9 @@ export const ProcedureCategoryPage: React.FC<ProcedureCategoryPageProps> = ({
         <div className="bg-white rounded-card p-6 sm:p-8 border border-cream-300 shadow-card mb-12 flex flex-col md:flex-row items-center gap-6">
           <div className="shrink-0 relative">
             <img
-              src="/images/dr-gomez-scrubs.png"
+              src="/images/dr-adndres-gomez-cirujano-plastico-ccoym-2017-min.webp"
               alt="Dr. Andrés Gómez en Quirófano"
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top border-2 border-medical-primary shadow-sm"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top bg-cream-100 border-2 border-medical-primary shadow-sm"
               loading="lazy"
             />
             <div className="absolute -bottom-1 -right-1 bg-medical-primary text-white p-1 rounded-full shadow-sm">
